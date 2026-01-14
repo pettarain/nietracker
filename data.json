@@ -9,10 +9,11 @@
   "other": [
     {
       "title": "Мод для интерфейса",
-      "image": "img/mod.jpg",
+      "image": "https://i.ytimg.com/vi/BscjKqR2peM/maxresdefault.jpg",
       "downloadUrl": "https://example.com/file",
       "instruction": "Поместите файл в папку с игрой и запустите...",
       "getUrl": "https://example.com/get-key"
     }
   ]
+
 }
