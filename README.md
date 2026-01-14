@@ -1,2 +1,0 @@
-# nietracker
-secret site, tssss 
