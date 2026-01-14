@@ -1,0 +1,18 @@
+{
+  "games": [
+    {
+      "title": "S.T.A.L.K.E.R. 2",
+      "image": "img/stalker2.jpg",
+      "downloadUrl": "https://example.com/download-link"
+    }
+  ],
+  "other": [
+    {
+      "title": "Мод для интерфейса",
+      "image": "img/mod.jpg",
+      "downloadUrl": "https://example.com/file",
+      "instruction": "Поместите файл в папку с игрой и запустите...",
+      "getUrl": "https://example.com/get-key"
+    }
+  ]
+}
