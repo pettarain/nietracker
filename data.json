@@ -1,69 +1,394 @@
-{
-  "games": [
-    {
-      "title": "Five Nights at Freddy’s: Multiplayer 1",
-      "image": "https://thelastgame.ru/wp-content/uploads/2020/05/1590504446_five-nights-at-freddys-multiplayer.jpg",
-      "downloadUrl": "https://www.dropbox.com/scl/fi/7pvw1vouyckzxvw0yfi06/Five-Nights-at-Freddy-s-1-Multiplayer-v1.1.7-setup.rar?rlkey=xzxtyu96ylpz9ujvurhd3thwb&st=darjzxuq&dl=1"
-    },
-    {
-      "title": "The NOexistenceN of you AND me",
-      "image": "https://i.ytimg.com/vi/YgACVaYHazA/maxresdefault.jpg",
-      "downloadUrl": "https://mega.nz/file/X7AwTYTY#20PdDkpECVfQDN16DT9FkQgg0lN7b1xo6CCc7cw6RzY"
-    },
-    {
-      "title": "MiSide",
-      "image": "https://cs15.pikabu.ru/post_img/2025/01/04/0/og_og_17359383712748229.jpg",
-      "downloadUrl": "https://www.dropbox.com/scl/fi/8f08lo1uvhwgrevbg1fbm/MiSide.0.93L.7z?rlkey=rm3kb42w7smbs1g700z4oo64n&st=yawufdw1&dl=1"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "image": "https://img.ixbt.site/live/topics/preview/00/07/25/26/a829b552c6.jpg",
-      "downloadUrl": "https://mega.nz/file/DyxXkLKR#wT53Dkn47aorF89qlPz3x6RbFqBHAw0UbQ6fHZOR-i8"
-    },
-    { 
-      "title": "The Planet Crafter + DLC",
-      "image": "https://i.ytimg.com/vi/7a-fzjxfutU/maxresdefault.jpg",
-      "instruction": "Чтобы играть по онлайну, нужно скачать online fix (нажмите на Получить, чтобы перейти на сайт, а там выбирайте скачать фикс с сервера), как скачайте ThePlanetCrafter_Fix_Repair_Steam_Generic.rar, распакуйте всё содержимое в корневую папку игры с заменой. И готово! Ещё рекомендую скачать все DLC для разнобразия геймплея, полёты по другим планетам и так далее :)",
-      "downloadUrl": "https://mega.nz/file/73pDkAAR#SvaXZLYllmi6ZIHHuKstPeP_AGv4jnoYYfFAounh3o4",
-      "getUrl": "https://online-fix.me/games/survival/17492-the-planet-crafter-po-seti.html"
-    }
-  ],
-  "other": [
-    {
-      "title": "IObit Driver Booster Pro",
-      "image": "https://i.ytimg.com/vi/BscjKqR2peM/maxresdefault.jpg",
-      "downloadUrl": "https://www.dropbox.com/scl/fi/kggw083espu12hawc41mm/Driver-Booster.rar?rlkey=sqox5k2llfeexjj2nre1sna80&st=tv2idfkr&dl=1",
-      "instruction": "ВАЖНО: WINDOWS DEFENDER ДОЛЖЕН БЫТЬ ОТКЛЮЧЁН, ИЛИ КРЯК УДАЛИТСЯ И ОТ ПРОГРАММЫ НЕ БУДЕТ СМЫСЛА. ZIP ПРОСТО РАСПАКОВЫВАЙТЕ И ЗАПУСКАЕТЕ .EXE",
-      "getUrl": ""
-    },
-    {
-      "title": "Отключить WIN Defender",
-      "image": "https://i.ytimg.com/vi/Fyd8sVnEMaQ/maxresdefault.jpg",
-      "downloadUrl": "https://www.dropbox.com/scl/fi/zm4ofwvj70cr3ts9864ho/deadfender.exe?rlkey=ueexk17wc647fk51zv6rzchzr&st=7hm8g8d5&dl=1",
-      "instruction": "Скачивайте и запускайте программу от имени администратора. После того, как она всё отключит (будет написано FINISHED), то перезагружаете компьютере и кайфуем с торрент файлами, не потеряв кряки",
-      "getUrl": ""
-    },
-    {
-      "title": "IObit Advanced SystemCare",
-      "image": "https://i.ytimg.com/vi/qSLgX70U75Q/maxresdefault.jpg",
-      "downloadUrl": "https://www.dropbox.com/scl/fi/t4bhopxx6gc9vpwrgpsig/Advanced-SystemCare-Pro-18.2.0.223-Multilingual.rar?rlkey=eenlh2coi97sqpp4kbn18m05w&st=27i9pil1&dl=1",
-      "instruction": "Сначала распакуйте, потом запустите advanced-systemcare-setup.exe: 1. Вначале снимаем галки с установки дополнительного ПО, от них же и нажимаем на выборочную установку. 2. В Опции установки выбираем нужные нам опции и нажимаем установить. 3.Запустится установка ничего не нажимаем ждем завершения установки. После того как установка завершилась нажимаем пропустить и отказываемся от подписки. 4. Далее запустится прога, закрывать её через системный трей. 5. После этого копируем файлы из папки crack в папку с установленной программой. 6. Готово! Наслаждайтесь настройкой и улучшением системы :3",
-      "getUrl": ""
-    }
-  ]
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NieTracker | Gaming Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #060314;
+            --accent-purple: #8a2be2;
+            --accent-pink: #bf00ff;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --radius-ios: 24px;
+        }
 
-}
+        * { box-sizing: border-box; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
+        body {
+            margin: 0;
+            background-color: var(--bg-main);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* ФОН С СЕТКОЙ ИЗ КРЕСТИКОВ */
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M19 11h2V9h-2v2zm0 20h2v-2h-2v2zM9 21h2v-2H9v2zm20 0h2v-2h-2v2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
 
+        .lang-switcher {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            background: rgba(255,255,255,0.05);
+            padding: 4px;
+            border-radius: 100px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+        }
 
+        .lang-btn {
+            padding: 6px 14px;
+            border-radius: 100px;
+            border: none;
+            background: transparent;
+            color: rgba(255,255,255,0.4);
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 800;
+        }
 
+        .lang-btn.active {
+            background: #fff;
+            color: #000;
+        }
 
+        .header {
+            padding: 60px 20px 20px;
+            text-align: center;
+        }
 
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 10px;
+        }
 
+        .logo-img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px var(--accent-pink));
+            animation: logoPulse 4s infinite ease-in-out;
+        }
 
+        @keyframes logoPulse {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px var(--accent-purple)); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 30px var(--accent-pink)); }
+        }
 
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: 2px;
+            background: linear-gradient(to bottom, #fff, #a3a3a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
 
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 25px;
+            color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            position: relative;
+        }
 
+        .tab-btn.active {
+            color: #fff;
+        }
 
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 25%; width: 50%;
+            height: 2px; background: #fff;
+            box-shadow: 0 0 10px #fff;
+        }
 
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 100px; flex: 1; width: 100%; }
+        
+        .grid {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .grid.active { display: grid; animation: fadeIn 0.4s ease; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-ios);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-label {
+            position: absolute;
+            top: 12px; left: 12px;
+            background: #ff004c;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+
+        .card-title { 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            margin-bottom: 20px; 
+            color: #fff;
+            min-height: 2.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-group { display: flex; flex-direction: column; gap: 10px; }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Белая кнопка как на скриншоте */
+        .btn-download { 
+            background: #fff; 
+            color: #000; 
+        }
+        .btn-download:hover { background: #e0e0e0; transform: scale(1.02); }
+
+        /* Темные стеклянные кнопки */
+        .btn-secondary { 
+            background: rgba(255,255,255,0.05); 
+            color: #fff; 
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .tg-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 15px;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(15px);
+            z-index: 2000;
+            justify-content: center; align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #0c081d;
+            padding: 30px;
+            border-radius: 24px;
+            width: 100%; max-width: 450px;
+            border: 1px solid var(--glass-border);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-ru" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/bf00ff/ffffff?text=P'">
+        </div>
+        <h1>NIETRACKER</h1>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('games', event)" id="tab-games">Игры</button>
+        <button class="tab-btn" onclick="switchTab('other', event)" id="tab-other">Другое</button>
+    </div>
+
+    <div class="container">
+        <div id="games" class="grid active"></div>
+        <div id="other" class="grid"></div>
+    </div>
+
+    <div id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3 id="modal-title" style="margin-top: 0;">Инструкция</h3>
+            <p id="modal-text" style="color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 25px;"></p>
+            <button class="btn btn-download" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://t.me/your_channel" target="_blank" class="tg-btn" id="tg-link">Telegram</a>
+        <div id="footer-author" style="opacity: 0.3; font-size: 11px; margin-top: 10px;">
+            NieTracker &copy; 2026
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'ru';
+        let globalData = { games: [], other: [] };
+
+        const uiText = {
+            ru: { download: "Скачать", instruct: "Инструкция", get: "Получить", modal: "Инструкция", tg: "Telegram канал", author: "Автор" },
+            en: { download: "Download", instruct: "Manual", get: "Get", modal: "Manual", tg: "Telegram Channel", author: "Author" }
+        };
+
+        async function loadData() {
+            try {
+                // ПРОВЕРЬ, ЧТОБЫ ФАЙЛ data.json ЛЕЖАЛ РЯДОМ С ЭТИМ HTML
+                const response = await fetch('data.json');
+                globalData = await response.json();
+                render();
+            } catch (e) { 
+                console.error("Data load error", e); 
+                // Тестовые данные на случай отсутствия файла
+                globalData = {
+                    games: [
+                        { title: "Five Nights at Freddy's", image: "https://via.placeholder.com/400x200", downloadUrl: "#" },
+                        { title: "Hollow Knight: Silksong", image: "https://via.placeholder.com/400x200", downloadUrl: "#", instruction: "1. Распаковать\n2. Запустить .exe" }
+                    ],
+                    other: [
+                        { title: "IObit Driver Booster Pro", image: "https://via.placeholder.com/400x200", downloadUrl: "#", label: "Crack" }
+                    ]
+                };
+                render();
+            }
+        }
+
+        function createCard(item) {
+            let label = item.label ? `<div class="card-label">${item.label}</div>` : '';
+            
+            // Основная белая кнопка
+            let btns = `<a href="${item.downloadUrl}" target="_blank" class="btn btn-download">${uiText[currentLang].download}</a>`;
+            
+            // Кнопка Инструкция
+            if (item.instruction) {
+                const safeTxt = item.instruction.replace(/'/g, "\\'");
+                btns += `<button class="btn btn-secondary" onclick="showModal('${safeTxt}')">${uiText[currentLang].instruct}</button>`;
+            }
+            
+            // Кнопка Получить
+            if (item.getUrl) {
+                btns += `<a href="${item.getUrl}" target="_blank" class="btn btn-secondary">${uiText[currentLang].get}</a>`;
+            }
+
+            return `
+                <div class="card">
+                    ${label}
+                    <div class="card-img-wrapper">
+                        <img src="${item.image}" class="card-img" onerror="this.src='https://via.placeholder.com/400x250/060314/ffffff?text=NieTracker'">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">${item.title}</div>
+                        <div class="btn-group">${btns}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function render() {
+            document.getElementById('games').innerHTML = globalData.games.map(i => createCard(i)).join('');
+            document.getElementById('other').innerHTML = globalData.other.map(i => createCard(i)).join('');
+        }
+
+        function switchTab(tabId, event) {
+            document.querySelectorAll('.grid').forEach(g => g.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+            render();
+        }
+
+        function showModal(txt) {
+            document.getElementById('modal-text').innerText = txt;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() { document.getElementById('modal').style.display = 'none'; }
+
+        window.onload = loadData;
+    </script>
+</body>
+</html>
