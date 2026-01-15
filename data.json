@@ -1,9 +1,9 @@
 {
   "games": [
     {
-      "title": "S.T.A.L.K.E.R. 2",
-      "image": "img/stalker2.jpg",
-      "downloadUrl": "https://example.com/download-link"
+      "title": "Five Nights at Freddy’s: Multiplayer 1",
+      "image": "https://thelastgame.ru/wp-content/uploads/2020/05/1590504446_five-nights-at-freddys-multiplayer.jpg",
+      "downloadUrl": "https://www.dropbox.com/scl/fi/7pvw1vouyckzxvw0yfi06/Five-Nights-at-Freddy-s-1-Multiplayer-v1.1.7-setup.rar?rlkey=xzxtyu96ylpz9ujvurhd3thwb&st=darjzxuq&dl=1"
     }
   ],
   "other": [
@@ -31,6 +31,7 @@
   ]
 
 }
+
 
 
 
