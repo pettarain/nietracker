@@ -11,7 +11,7 @@
             --accent-purple: #8a2be2;
             --accent-pink: #bf00ff;
             --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.08);
             --radius-ios: 24px;
         }
 
@@ -25,11 +25,11 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            /* ФОН С СЕТКОЙ ИЗ КРЕСТИКОВ */
+            /* ФОН С ЧАСТИЦАМИ (КРЕСТИКИ) */
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
-                url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M19 11h2V9h-2v2zm0 20h2v-2h-2v2zM9 21h2v-2H9v2zm20 0h2v-2h-2v2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background-attachment: fixed;
+                radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(191, 0, 255, 0.1) 0%, transparent 40%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         .lang-switcher {
@@ -37,7 +37,7 @@
             top: 25px;
             right: 25px;
             display: flex;
-            background: rgba(255,255,255,0.05);
+            background: var(--glass-bg);
             padding: 4px;
             border-radius: 100px;
             border: 1px solid var(--glass-border);
@@ -50,33 +50,35 @@
             border-radius: 100px;
             border: none;
             background: transparent;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.5);
             cursor: pointer;
             font-size: 11px;
             font-weight: 800;
         }
 
         .lang-btn.active {
-            background: #fff;
-            color: #000;
+            background: var(--accent-purple);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
         }
 
         .header {
-            padding: 60px 20px 20px;
+            padding: 70px 20px 30px;
             text-align: center;
         }
 
         .logo-container {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 10px;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 15px;
+            position: relative;
         }
 
         .logo-img { 
             width: 100%; 
             height: 100%; 
             object-fit: contain;
-            filter: drop-shadow(0 0 15px var(--accent-pink));
+            filter: drop-shadow(0 0 20px var(--accent-pink));
             animation: logoPulse 4s infinite ease-in-out;
         }
 
@@ -86,178 +88,169 @@
         }
 
         h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 900;
             margin: 0;
-            letter-spacing: 2px;
-            background: linear-gradient(to bottom, #fff, #a3a3a3);
+            background: linear-gradient(to bottom, #fff 50%, var(--accent-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
         }
 
         .nav-tabs {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
+            gap: 12px;
+            margin-bottom: 50px;
         }
 
         .tab-btn {
-            background: transparent;
-            border: none;
-            padding: 10px 25px;
-            color: rgba(255,255,255,0.5);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 12px 28px;
+            border-radius: 100px;
+            color: rgba(255,255,255,0.7);
             cursor: pointer;
+            backdrop-filter: blur(20px);
             font-weight: 700;
-            font-size: 1rem;
-            position: relative;
         }
 
         .tab-btn.active {
-            color: #fff;
+            background: #fff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
         }
 
-        .tab-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 25%; width: 50%;
-            height: 2px; background: #fff;
-            box-shadow: 0 0 10px #fff;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 100px; flex: 1; width: 100%; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px 100px; flex: 1; width: 100%; }
         
         .grid {
             display: none;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            animation: slideIn 0.5s ease-out forwards;
         }
 
-        .grid.active { display: grid; animation: fadeIn 0.4s ease; }
+        .grid.active { display: grid; }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
         .card {
-            background: rgba(255, 255, 255, 0.02);
+            background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: var(--radius-ios);
             overflow: hidden;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(25px);
             display: flex;
             flex-direction: column;
             position: relative;
         }
 
         .card:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
 
         .card-label {
             position: absolute;
-            top: 12px; left: 12px;
+            top: 15px;
+            left: 15px;
             background: #ff004c;
             color: #fff;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 8px;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 900;
             text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(255,0,76,0.4);
             z-index: 2;
-        }
-
-        .card-img-wrapper {
-            width: 100%;
-            height: 180px;
-            overflow: hidden;
         }
 
         .card-img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
+            border-bottom: 1px solid var(--glass-border);
         }
 
-        .card-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+        .card-content { padding: 25px; flex: 1; display: flex; flex-direction: column; }
 
-        .card-title { 
-            font-size: 1.2rem; 
-            font-weight: 700; 
-            margin-bottom: 20px; 
-            color: #fff;
-            min-height: 2.8rem;
-            display: flex;
-            align-items: center;
-        }
+        .card-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 25px; line-height: 1.2; }
 
-        .btn-group { display: flex; flex-direction: column; gap: 10px; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
 
         .btn {
-            width: 100%;
-            padding: 14px;
-            border-radius: 16px;
+            padding: 15px;
+            border-radius: 18px;
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 700;
+            font-size: 1rem;
+            font-weight: 800;
             text-align: center;
             border: none;
             cursor: pointer;
-            display: block;
         }
 
-        /* Белая кнопка как на скриншоте */
         .btn-download { 
             background: #fff; 
             color: #000; 
+            box-shadow: 0 4px 15px rgba(255,255,255,0.2);
         }
-        .btn-download:hover { background: #e0e0e0; transform: scale(1.02); }
+        .btn-download:hover { background: var(--accent-pink); color: #fff; box-shadow: 0 0 25px var(--accent-pink); }
 
-        /* Темные стеклянные кнопки */
         .btn-secondary { 
             background: rgba(255,255,255,0.05); 
             color: #fff; 
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid var(--glass-border);
         }
-        .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
         footer {
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--glass-border);
         }
 
         .tg-btn {
-            display: inline-block;
-            background: rgba(255,255,255,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(45deg, #0088cc, #00a2ff);
             color: white;
-            padding: 12px 30px;
+            padding: 18px 35px;
             border-radius: 100px;
             text-decoration: none;
-            font-weight: 600;
-            border: 1px solid var(--glass-border);
-            margin-bottom: 15px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 136, 204, 0.4);
         }
+
+        .tg-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 136, 204, 0.6); }
 
         #modal {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(15px);
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(20px);
             z-index: 2000;
             justify-content: center; align-items: center;
             padding: 20px;
         }
 
         .modal-content {
-            background: #0c081d;
-            padding: 30px;
-            border-radius: 24px;
-            width: 100%; max-width: 450px;
+            background: #110c2b;
+            padding: 40px;
+            border-radius: 30px;
+            width: 100%; max-width: 550px;
             border: 1px solid var(--glass-border);
-            text-align: center;
+            position: relative;
+            box-shadow: 0 30px 100px rgba(0,0,0,0.8);
         }
     </style>
 </head>
@@ -270,7 +263,7 @@
 
     <header class="header">
         <div class="logo-container">
-            <img src="img/logo2.png" alt="Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/bf00ff/ffffff?text=P'">
+            <img src="img/logo2.png" alt="NieTracker Logo" class="logo-img">
         </div>
         <h1>NIETRACKER</h1>
     </header>
@@ -287,16 +280,18 @@
 
     <div id="modal" onclick="closeModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <h3 id="modal-title" style="margin-top: 0;">Инструкция</h3>
-            <p id="modal-text" style="color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 25px;"></p>
-            <button class="btn btn-download" onclick="closeModal()">Закрыть</button>
+            <h3 id="modal-title" style="margin: 0 0 20px; font-size: 1.8rem;">Инструкция</h3>
+            <p id="modal-text" style="line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 30px; white-space: pre-line; font-size: 1.1rem;"></p>
+            <button class="btn btn-download" style="width: 100%" onclick="closeModal()">OK</button>
         </div>
     </div>
 
     <footer>
-        <a href="https://t.me/your_channel" target="_blank" class="tg-btn" id="tg-link">Telegram</a>
-        <div id="footer-author" style="opacity: 0.3; font-size: 11px; margin-top: 10px;">
-            NieTracker &copy; 2026
+        <a href="https://t.me/nierosyjski" target="_blank" class="tg-btn" id="tg-link">
+            Telegram канал Автора
+        </a>
+        <div id="footer-author" style="opacity: 0.4; font-size: 12px; font-weight: 600;">
+            Автор: Petta Rain | NieTracker &copy; 2026
         </div>
     </footer>
 
@@ -305,66 +300,49 @@
         let globalData = { games: [], other: [] };
 
         const uiText = {
-            ru: { download: "Скачать", instruct: "Инструкция", get: "Получить", modal: "Инструкция", tg: "Telegram канал", author: "Автор" },
-            en: { download: "Download", instruct: "Manual", get: "Get", modal: "Manual", tg: "Telegram Channel", author: "Author" }
+            ru: { games: "Игры", other: "Другое", download: "Скачать", instruct: "Инструкция", get: "Получить", modal: "Инструкция", tg: "Telegram канал Автора", author: "Автор" },
+            en: { games: "Games", other: "Other", download: "Download", instruct: "Manual", get: "Get", modal: "Manual", tg: "Author's Telegram", author: "Author" }
         };
 
         async function loadData() {
             try {
-                // ПРОВЕРЬ, ЧТОБЫ ФАЙЛ data.json ЛЕЖАЛ РЯДОМ С ЭТИМ HTML
                 const response = await fetch('data.json');
                 globalData = await response.json();
                 render();
-            } catch (e) { 
-                console.error("Data load error", e); 
-                // Тестовые данные на случай отсутствия файла
-                globalData = {
-                    games: [
-                        { title: "Five Nights at Freddy's", image: "https://via.placeholder.com/400x200", downloadUrl: "#" },
-                        { title: "Hollow Knight: Silksong", image: "https://via.placeholder.com/400x200", downloadUrl: "#", instruction: "1. Распаковать\n2. Запустить .exe" }
-                    ],
-                    other: [
-                        { title: "IObit Driver Booster Pro", image: "https://via.placeholder.com/400x200", downloadUrl: "#", label: "Crack" }
-                    ]
-                };
-                render();
-            }
+            } catch (e) { console.error("Error", e); }
+        }
+
+        function render() {
+            // Теперь передаем одинаковый тип отрисовки для всех, чтобы условия кнопок были общими
+            document.getElementById('games').innerHTML = globalData.games.map(item => createCard(item)).join('');
+            document.getElementById('other').innerHTML = globalData.other.map(item => createCard(item)).join('');
         }
 
         function createCard(item) {
-            let label = item.label ? `<div class="card-label">${item.label}</div>` : '';
-            
-            // Основная белая кнопка
+            let labelHtml = item.label ? `<div class="card-label">${item.label}</div>` : '';
             let btns = `<a href="${item.downloadUrl}" target="_blank" class="btn btn-download">${uiText[currentLang].download}</a>`;
             
-            // Кнопка Инструкция
-            if (item.instruction) {
-                const safeTxt = item.instruction.replace(/'/g, "\\'");
-                btns += `<button class="btn btn-secondary" onclick="showModal('${safeTxt}')">${uiText[currentLang].instruct}</button>`;
+            // ПРОВЕРКА ДЛЯ ВСЕХ КАТЕГОРИЙ: если есть текст инструкции, рисуем кнопку
+            if (item.instruction && item.instruction.trim() !== "") {
+                const safeText = item.instruction.replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+                btns += `<button class="btn btn-secondary" onclick="showModal('${safeText}')">${uiText[currentLang].instruct}</button>`;
             }
             
-            // Кнопка Получить
-            if (item.getUrl) {
+            // ПРОВЕРКА ДЛЯ ВСЕХ КАТЕГОРИЙ: если есть ссылка getUrl, рисуем кнопку "Получить"
+            if (item.getUrl && item.getUrl.trim() !== "") {
                 btns += `<a href="${item.getUrl}" target="_blank" class="btn btn-secondary">${uiText[currentLang].get}</a>`;
             }
 
             return `
                 <div class="card">
-                    ${label}
-                    <div class="card-img-wrapper">
-                        <img src="${item.image}" class="card-img" onerror="this.src='https://via.placeholder.com/400x250/060314/ffffff?text=NieTracker'">
-                    </div>
+                    ${labelHtml}
+                    <img src="${item.image}" class="card-img" onerror="this.src='https://via.placeholder.com/400x250/060314/ffffff?text=NieTracker'">
                     <div class="card-content">
                         <div class="card-title">${item.title}</div>
                         <div class="btn-group">${btns}</div>
                     </div>
                 </div>
             `;
-        }
-
-        function render() {
-            document.getElementById('games').innerHTML = globalData.games.map(i => createCard(i)).join('');
-            document.getElementById('other').innerHTML = globalData.other.map(i => createCard(i)).join('');
         }
 
         function switchTab(tabId, event) {
@@ -378,6 +356,13 @@
             currentLang = lang;
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('btn-' + lang).classList.add('active');
+            
+            document.getElementById('tab-games').innerText = uiText[lang].games;
+            document.getElementById('tab-other').innerText = uiText[lang].other;
+            document.getElementById('modal-title').innerText = uiText[lang].modal;
+            document.getElementById('tg-link').innerText = uiText[lang].tg;
+            document.getElementById('footer-author').innerHTML = `${uiText[lang].author}: Petta Rain | NieTracker &copy; 2026`;
+            
             render();
         }
 
@@ -392,3 +377,4 @@
     </script>
 </body>
 </html>
+
