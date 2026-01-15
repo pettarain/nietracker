@@ -15,17 +15,17 @@
       "image": "https://cs15.pikabu.ru/post_img/2025/01/04/0/og_og_17359383712748229.jpg",
       "downloadUrl": "https://www.dropbox.com/scl/fi/8f08lo1uvhwgrevbg1fbm/MiSide.0.93L.7z?rlkey=rm3kb42w7smbs1g700z4oo64n&st=yawufdw1&dl=1"
     },
+    {
+      "title": "Hollow Knight: Silksong",
+      "image": "https://img.ixbt.site/live/topics/preview/00/07/25/26/a829b552c6.jpg",
+      "downloadUrl": "https://mega.nz/file/DyxXkLKR#wT53Dkn47aorF89qlPz3x6RbFqBHAw0UbQ6fHZOR-i8"
+    },
     { 
       "title": "The Planet Crafter + DLC",
       "image": "https://i.ytimg.com/vi/7a-fzjxfutU/maxresdefault.jpg",
       "instruction": "Чтобы играть по онлайну, нужно скачать online fix (нажмите на Получить, чтобы перейти на сайт, а там выбирайте скачать фикс с сервера), как скачайте ThePlanetCrafter_Fix_Repair_Steam_Generic.rar, распакуйте всё содержимое в корневую папку игры с заменой. И готово! Ещё рекомендую скачать все DLC для разнобразия геймплея, полёты по другим планетам и так далее :)",
       "downloadUrl": "https://mega.nz/file/73pDkAAR#SvaXZLYllmi6ZIHHuKstPeP_AGv4jnoYYfFAounh3o4",
       "getUrl": "https://online-fix.me/games/survival/17492-the-planet-crafter-po-seti.html"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "image": "https://img.ixbt.site/live/topics/preview/00/07/25/26/a829b552c6.jpg",
-      "downloadUrl": "https://mega.nz/file/DyxXkLKR#wT53Dkn47aorF89qlPz3x6RbFqBHAw0UbQ6fHZOR-i8"
     }
   ],
   "other": [
@@ -53,6 +53,7 @@
   ]
 
 }
+
 
 
 
