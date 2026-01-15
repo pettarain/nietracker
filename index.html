@@ -25,6 +25,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            /* ФОН С ЧАСТИЦАМИ (КРЕСТИКИ) */
             background-image: 
                 radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 80% 70%, rgba(191, 0, 255, 0.1) 0%, transparent 40%),
@@ -176,28 +177,11 @@
             border-bottom: 1px solid var(--glass-border);
         }
 
-        /* ИСПРАВЛЕНИЕ: Контент больше не растягивает пустоту */
-        .card-content { 
-            padding: 25px; 
-            display: flex; 
-            flex-direction: column; 
-        }
+        .card-content { padding: 25px; flex: 1; display: flex; flex-direction: column; }
 
-        /* ИСПРАВЛЕНИЕ: Зарезервированное место под название (чтобы кнопки были в ряд) */
-        .card-title { 
-            font-size: 1.4rem; 
-            font-weight: 800; 
-            margin-bottom: 15px; 
-            line-height: 1.2;
-            min-height: 3.4rem; /* Высота для 2-х строк текста */
-        }
+        .card-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 25px; line-height: 1.2; }
 
-        /* ИСПРАВЛЕНИЕ: Убран margin-top: auto, чтобы кнопки не улетали вниз */
-        .btn-group { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 10px; 
-        }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
 
         .btn {
             padding: 15px;
@@ -329,6 +313,7 @@
         }
 
         function render() {
+            // Теперь передаем одинаковый тип отрисовки для всех, чтобы условия кнопок были общими
             document.getElementById('games').innerHTML = globalData.games.map(item => createCard(item)).join('');
             document.getElementById('other').innerHTML = globalData.other.map(item => createCard(item)).join('');
         }
@@ -337,11 +322,13 @@
             let labelHtml = item.label ? `<div class="card-label">${item.label}</div>` : '';
             let btns = `<a href="${item.downloadUrl}" target="_blank" class="btn btn-download">${uiText[currentLang].download}</a>`;
             
+            // ПРОВЕРКА ДЛЯ ВСЕХ КАТЕГОРИЙ: если есть текст инструкции, рисуем кнопку
             if (item.instruction && item.instruction.trim() !== "") {
                 const safeText = item.instruction.replace(/'/g, "&apos;").replace(/"/g, "&quot;");
                 btns += `<button class="btn btn-secondary" onclick="showModal('${safeText}')">${uiText[currentLang].instruct}</button>`;
             }
             
+            // ПРОВЕРКА ДЛЯ ВСЕХ КАТЕГОРИЙ: если есть ссылка getUrl, рисуем кнопку "Получить"
             if (item.getUrl && item.getUrl.trim() !== "") {
                 btns += `<a href="${item.getUrl}" target="_blank" class="btn btn-secondary">${uiText[currentLang].get}</a>`;
             }
@@ -390,3 +377,4 @@
     </script>
 </body>
 </html>
+
