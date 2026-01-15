@@ -32,7 +32,6 @@
                 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        /* Языковой переключатель */
         .lang-switcher {
             position: fixed;
             top: 25px;
@@ -63,7 +62,6 @@
             box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
         }
 
-        /* Шапка NieTracker */
         .header {
             padding: 70px 20px 30px;
             text-align: center;
@@ -99,7 +97,6 @@
             letter-spacing: -2px;
         }
 
-        /* Навигация */
         .nav-tabs {
             display: flex;
             justify-content: center;
@@ -125,7 +122,6 @@
             box-shadow: 0 10px 20px rgba(255,255,255,0.1);
         }
 
-        /* Контейнер и Сетка */
         .container { max-width: 1140px; margin: 0 auto; padding: 0 20px 100px; flex: 1; width: 100%; }
         
         .grid {
@@ -142,7 +138,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Карточка NIE Style */
         .card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
@@ -160,7 +155,6 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
 
-        /* Бейдж (Crack и т.д.) */
         .card-label {
             position: absolute;
             top: 15px;
@@ -214,7 +208,6 @@
         }
         .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
-        /* Подвал */
         footer {
             padding: 60px 20px;
             text-align: center;
@@ -239,7 +232,6 @@
 
         .tg-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 136, 204, 0.6); }
 
-        /* Модалка */
         #modal {
             display: none;
             position: fixed;
@@ -321,24 +313,24 @@
         }
 
         function render() {
-            document.getElementById('games').innerHTML = globalData.games.map(item => createCard(item, 'game')).join('');
-            document.getElementById('other').innerHTML = globalData.other.map(item => createCard(item, 'other')).join('');
+            // Теперь передаем одинаковый тип отрисовки для всех, чтобы условия кнопок были общими
+            document.getElementById('games').innerHTML = globalData.games.map(item => createCard(item)).join('');
+            document.getElementById('other').innerHTML = globalData.other.map(item => createCard(item)).join('');
         }
 
-        function createCard(item, type) {
-            // Добавляем бейдж (Crack и т.д.) если он есть в JSON
+        function createCard(item) {
             let labelHtml = item.label ? `<div class="card-label">${item.label}</div>` : '';
-            
             let btns = `<a href="${item.downloadUrl}" target="_blank" class="btn btn-download">${uiText[currentLang].download}</a>`;
             
-            if (type === 'other') {
-                if (item.instruction && item.instruction.trim() !== "") {
-                    const safeText = item.instruction.replace(/'/g, "&apos;").replace(/"/g, "&quot;");
-                    btns += `<button class="btn btn-secondary" onclick="showModal('${safeText}')">${uiText[currentLang].instruct}</button>`;
-                }
-                if (item.getUrl && item.getUrl.trim() !== "") {
-                    btns += `<a href="${item.getUrl}" target="_blank" class="btn btn-secondary">${uiText[currentLang].get}</a>`;
-                }
+            // ПРОВЕРКА ДЛЯ ВСЕХ КАТЕГОРИЙ: если есть текст инструкции, рисуем кнопку
+            if (item.instruction && item.instruction.trim() !== "") {
+                const safeText = item.instruction.replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+                btns += `<button class="btn btn-secondary" onclick="showModal('${safeText}')">${uiText[currentLang].instruct}</button>`;
+            }
+            
+            // ПРОВЕРКА ДЛЯ ВСЕХ КАТЕГОРИЙ: если есть ссылка getUrl, рисуем кнопку "Получить"
+            if (item.getUrl && item.getUrl.trim() !== "") {
+                btns += `<a href="${item.getUrl}" target="_blank" class="btn btn-secondary">${uiText[currentLang].get}</a>`;
             }
 
             return `
@@ -385,4 +377,3 @@
     </script>
 </body>
 </html>
-
